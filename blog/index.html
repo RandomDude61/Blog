@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Style -->
     <link rel="stylesheet" href="style.css">
@@ -32,7 +35,8 @@
                 <h1 class="jumbotron-title" onmouseover="changeJumbotronText(this)" onmouseout="changeJumbotronTextBack(this)">Get Programming Tips here!</h1>
                 <div class="header-flex">
                     <div>
-                        <h2 class="jumbotron-text">Are you a newcomer in Programming? <br> Learn through <span style="color: #f4a261;">Simple</span> Game and Website!</h2>
+                        <h2 class="jumbotron-text" data-aos="fade-left" data-aos-once="true" data-aos-duration="2000" data-aos-delay="500" data-aos-easing="ease-in">Are you a newcomer in Programming? <br> Learn through <span style="color: #f4a261;">Simple</span> Game and Website!</h2>
+
                         <div class="mini-text-flex">
                             <p class="mini-text">Learn Basic Programming Here</p>
                             <button id="icon-up" onclick="changeText()">
@@ -42,7 +46,7 @@
                                 <i class="far fa-hand-point-down"></i>
                             </button>
                         </div>
-                        </div>
+                    </div>
     
                     <div>
                         <img onmouseover="changeImage(this)" onmouseout="changeImageBack(this)" src="./assets/img-header.png" alt="Jumbotron-Image" width="500" height="300">
@@ -83,7 +87,7 @@
                     <div class="slide-text">
                         <h2>Game Development</h2>
                         <p>
-                            Instead of playing games all day long, why not create your own?
+                            Instead of playing games all day long, why not create your own games?
                         </p>
                     </div>
                 </div>
@@ -92,7 +96,7 @@
                     <div class="slide-text">
                         <h2>Web Development</h2>
                         <p>
-                            Every company need websites. Take advantage of that opportunity!
+                            Every company need a website. Take advantage of that opportunity!
                         </p>
                     </div>
                 </div>
@@ -100,7 +104,7 @@
                     <img src="./assets/web-design.jpg" alt="" />
                     <div class="slide-text">
                         <h2>Web Design</h2>
-                        <p>Colors, Transitions, Animations are cool.</p>
+                        <p>Colors, Transitions, and Animations are cool.</p>
                     </div>
               </div>
               <div class="slide">
@@ -114,18 +118,100 @@
                 <img src="./assets/apps.jpg" alt="" />
                 <div class="slide-text">
                   <h2>Apps Development</h2>
-                  <p>Mobile apps are so popular and one of the most needed inventions in this world.</p>
+                  <p>Mobile apps are so popular and one of the most needed inventions in the world.</p>
                 </div>
               </div>
-            <div class="navigation">
-                <div class="slider-btn active"></div>
-                <div class="slider-btn"></div>
-                <div class="slider-btn"></div>
-                <div class="slider-btn"></div>
-                <div class="slider-btn"></div>
-            </div>
+
+              <div class="navigation">
+                  <div class="slider-btn active"></div>
+                  <div class="slider-btn"></div>
+                  <div class="slider-btn"></div>
+                  <div class="slider-btn"></div>
+                  <div class="slider-btn"></div>
+              </div>
             </div>
         </section>
+
+        <div class="main-content">
+            <aside>
+                <div class="profile">
+                    <h3 class="aside-title">It's Cobee</h3>
+                    <img src="./assets/cobee.png" alt="Cobee" class="profile-picture" width="150px" height="auto">
+                    
+                    <!-- Like & Dislike Button -->
+                    <div class="toggle">
+                        <button class="btn" id="green">
+                            <i class="fa fa-thumbs-up fa-lg"></i>
+                        </button>
+                        <button class="btn" id="red">
+                            <i class="fa fa-thumbs-down fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="Search-tags-container">
+                    <div class="input-tag">
+                        <h3 class="aside-title">Search Here</h3>
+                        <input id="myInput" type="text" placeholder="Search...">
+                        <span class="addBtn" onclick="newElement()"">Search</span>
+                    </div>
+                    <ul id="myUL" class="search-tags-list">
+                        <li class="search-tags-item">HTML</li>
+                        <li class="search-tags-item">Code</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="content">
+                <article id="my-project">
+                    <h3 class="article-title">My Projects</h3>
+                    <div class="project-container">
+                        <div class="project">
+                            <img src="assets/desert-rally.png" alt="" width="300px" height="210px">
+                            <h4 class="project-title">Desert Rally</h4>
+                            <p class="project-description">Desert Rally uses the Scratch 3</p>
+                        </div>
+                        <div class="project">
+                            <img src="assets/memory-game.png" alt="" width="300px" height="210px">
+                            <h4 class="project-title">Memory Game</h4>
+                            <p class="project-description">Memory Game uses Phaser 3</p>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project">
+                            <img src="assets/platformer.png" alt="" width="300px" height="210px">
+                            <h4 class="project-title">Platformer</h4>
+                            <p class="project-description">Platformer uses Construct 3</p>
+                        </div>
+                        <div class="project">
+                            <img src="assets/florist-shop.png" alt="" width="300px" height="210px">
+                            <h4 class="project-title">Florist Shop</h4>
+                            <p class="project-description">Florist Shop uses Visual Studio Code</p>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article id="video">
+                    <div class="item-video">
+                        <h3 class="article-title">What is Coding?</h3>
+                        <iframe width="500" height="350" src="https://www.youtube.com/embed/XMZFUnAgOqs?si=n46ODxaow9wzjJpn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        <h3 class="article-title">Coding is Not Difficult</h3>
+                        <iframe width="500" height="350" src="https://www.youtube.com/embed/hb7Q33ysCwI?si=buoztMA_inb3qYln" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <article id="maps">
+                    <h3 class="article-title">Location</h3>
+                    <div class="maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.104121772391!2d115.23787957530318!3d-8.681647888404067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240f88bb37a69%3A0xdf8443f1fabfe305!2sPT.Timedoor%20Indonesia!5e0!3m2!1sid!2sid!4v1716797172711!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </article>
+            </div>
+        </div>
     </main>
 
 
@@ -141,6 +227,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
